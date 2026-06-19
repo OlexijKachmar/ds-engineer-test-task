@@ -1,0 +1,39 @@
+
+
+artifacts/*.joblib
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.py[oc]
+build/
+dist/
+wheels/
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Pytest
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+uv
+# (keep uv.lock and pyproject.toml tracked — they define the env)
+
+# Model artifacts / large files (uncomment if needed)
+task_3_mnist_oop/data/
