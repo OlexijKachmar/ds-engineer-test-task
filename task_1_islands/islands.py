@@ -1,7 +1,4 @@
 from collections import deque
-from typing import List, Tuple, Dict
-
-from collections import deque
 from typing import List, Tuple
 
 
