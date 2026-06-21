@@ -6,19 +6,20 @@ A unified digit classification interface that supports three interchangeable alg
 
 ```
 task_3_mnist_oop/
-├── interfaces.py               # DigitClassificationInterface (ABC)
-├── lenet5.py                   # LeNet5 CNN architecture
-├── cnn_classifier.py           # CNNClassifier
-├── random_forest_classifier.py # RandomForestClassifier
-├── random_classifier.py        # RandomModelClassifier
-├── digit_classifier.py         # DigitClassifier (dispatcher)
-├── demo.py                     # Runnable demo on real MNIST images
-├── training/
-│   ├── train_cnn.py            # Trains LeNet5, saves artifacts/lenet5.pt
-│   └── train_rf.py             # Trains RandomForestClassifier, saves artifacts/random_forest.joblib
-└── artifacts/
-    ├── lenet5.pt                # Trained CNN checkpoint (state_dict)
-    └── random_forest.joblib     # Trained RF checkpoint (joblib bundle)
+├── artifacts/
+│   ├── lenet5.pt                 # trained CNN state_dict
+│   └── random_forest.joblib      # trained Random Forest model
+├── tests/
+├── README.md
+├── cnn_classifier.py             # CNN adapter implementing the common interface
+├── cnn_trainer.py                # trains and saves the LeNet5 model
+├── demo.py                       # loads trained models and predicts real MNIST images
+├── digit_classifier.py           # selects cnn, rf, or rand implementation
+├── interfaces.py                 # DigitClassificationInterface
+├── lenet5.py                     # LeNet5 architecture
+├── random_classifier.py          # random classifier using the center crop
+├── random_forest_classifier.py   # Random Forest adapter
+└── rf_trainer.py                 # trains and saves the Random Forest model
 ```
 
 ## Design
